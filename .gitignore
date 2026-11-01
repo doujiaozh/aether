@@ -10,6 +10,7 @@ dist/
 # demo artifacts
 aether-report.md
 aether-report/
+.aether-work/
 .aether-trace/
 
 # env & secrets

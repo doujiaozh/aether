@@ -13,6 +13,16 @@ importers:
   packages/aether-core:
     specifiers: {}
 
+  packages/aether-demo:
+    specifiers:
+      aether-core: workspace:^
+      aether-llm: workspace:^
+      aether-tools: workspace:^
+    dependencies:
+      aether-core: link:../aether-core
+      aether-llm: link:../aether-llm
+      aether-tools: link:../aether-tools
+
   packages/aether-llm:
     specifiers:
       aether-core: workspace:^

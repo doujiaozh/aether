@@ -1,0 +1,36 @@
+{
+  "name": "aether-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Aether end-to-end demo: GitHub repo -> AST scan -> LLM architecture report -> Markdown",
+  "license": "MIT",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "bin": {
+    "aether-demo": "./dist/src/main.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.16.0"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "start": "node dist/src/main.js",
+    "test": "node --test dist/tests/*.test.js"
+  },
+  "dependencies": {
+    "aether-core": "workspace:^",
+    "aether-llm": "workspace:^",
+    "aether-tools": "workspace:^"
+  }
+}

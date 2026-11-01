@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "description": "Aether LLM layer — OpenAI-compatible client (InkStone / OpenAI), 50 RPM token pacing, 429 exponential backoff and a fast/strong model router.",
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
     }
   },
   "files": ["dist", "README.md"],

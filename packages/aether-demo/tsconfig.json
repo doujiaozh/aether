@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
+    "composite": true,
+    "tsBuildInfoFile": "dist/.tsbuildinfo"
+  },
+  "include": ["src/**/*.ts", "tests/**/*.ts"],
+  "references": [
+    { "path": "../aether-core" },
+    { "path": "../aether-llm" },
+    { "path": "../aether-tools" }
+  ]
+}

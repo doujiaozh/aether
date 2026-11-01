@@ -49,6 +49,13 @@ export class ReactiveEffect<T = any> {
   parent: ReactiveEffect | undefined
   readonly allowRecurse: boolean
   readonly options: ReactiveEffectOptions<T>
+  /**
+   * Stable scheduler job for this effect. `queueJob` dedupes by function
+   * identity, so this MUST be a single instance per effect — passing a fresh
+   * `() => effect.run()` closure would defeat the dedupe and run the effect
+   * once per trigger.
+   */
+  readonly job: () => T = () => this.run()
 
   constructor(public fn: () => T, options: ReactiveEffectOptions<T> = {}) {
     this.options = options
@@ -153,7 +160,7 @@ export function trigger(dep: Dep): void {
 
 function runEffectNow(effect: ReactiveEffect): void {
   if (effect.options.scheduler) {
-    effect.options.scheduler(() => effect.run())
+    effect.options.scheduler(effect.job)
   } else {
     effect.run()
   }

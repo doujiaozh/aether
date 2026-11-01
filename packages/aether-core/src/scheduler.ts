@@ -81,3 +81,8 @@ export function getErrorHandler(): ((error: unknown, job: Job) => void) | undefi
 export function maybeAwait<T>(value: T): T | Promise<T> {
   return isPromiseLike(value) ? Promise.resolve(value) : value
 }
+
+/** Jobs still waiting in this tick's queue (a settle probe for hosts). */
+export function pendingJobCount(): number {
+  return queue.length
+}
