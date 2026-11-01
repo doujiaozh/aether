@@ -1,0 +1,38 @@
+{
+  "name": "aether-tools",
+  "version": "0.1.0",
+  "description": "Physical-grade sandboxed tool execution layer for Aether: typed Tool contracts, AbortController time-boxing, replayable traces.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Aether Contributors",
+  "homepage": "https://github.com/doujiaozh/aether",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doujiaozh/aether.git"
+  },
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "files": [
+    "dist/src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -b",
+    "test": "node --test dist/tests/*.test.js"
+  },
+  "dependencies": {
+    "aether-core": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  },
+  "engines": {
+    "node": ">=18.16.0"
+  }
+}

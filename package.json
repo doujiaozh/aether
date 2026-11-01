@@ -1,0 +1,41 @@
+{
+  "name": "aether",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Aether — a reactive, declarative, self-healing AI agent orchestration framework. 让 AI 编排像写前端一样简单、优雅、坚不可摧。",
+  "type": "module",
+  "license": "MIT",
+  "author": "Aether Contributors",
+  "homepage": "https://github.com/doujiaozh/aether",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doujiaozh/aether.git"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "reactive",
+    "llm",
+    "orchestration",
+    "framework",
+    "typescript",
+    "deepseek"
+  ],
+  "engines": {
+    "node": ">=18.16.0"
+  },
+  "packageManager": "pnpm@7.33.7",
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc -b --watch",
+    "typecheck": "tsc -b --dry",
+    "test": "pnpm -r --if-present run test",
+    "demo": "pnpm --filter aether-demo run start",
+    "demo:offline": "pnpm --filter aether-demo run start -- --offline",
+    "demo:chaos": "pnpm --filter aether-demo run start -- --offline --chaos 3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3"
+  }
+}

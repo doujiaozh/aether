@@ -1,0 +1,29 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# build output
+dist/
+*.tsbuildinfo
+*.tsbuildinfo.*
+
+# demo artifacts
+aether-report.md
+aether-report/
+.aether-trace/
+
+# env & secrets
+.env
+.env.local
+*.local
+
+# editor / os
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*

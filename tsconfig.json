@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "files": [],
+  "references": [
+    { "path": "./packages/aether-core" },
+    { "path": "./packages/aether-llm" },
+    { "path": "./packages/aether-tools" },
+    { "path": "./packages/aether-demo" }
+  ]
+}

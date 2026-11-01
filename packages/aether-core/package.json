@@ -1,0 +1,23 @@
+{
+  "name": "aether-core",
+  "version": "0.1.0",
+  "description": "Aether core — a dependency-free reactive engine (ref / computed / effect / dependency graph) built for AI agent orchestration.",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsc -b",
+    "test": "node --test dist/tests/*.test.js"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "aether-llm",
+  "version": "0.1.0",
+  "description": "Aether LLM layer — OpenAI-compatible client (InkStone / OpenAI), 50 RPM token pacing, 429 exponential backoff and a fast/strong model router.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsc -b",
+    "test": "node --test dist/tests/*.test.js"
+  },
+  "dependencies": {
+    "aether-core": "workspace:^"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
